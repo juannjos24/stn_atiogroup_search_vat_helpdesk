@@ -1,13 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_partner_tree_razon_social_col" model="ir.ui.view">
-        <field name="name">res.partner.tree.razon.social.col</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_tree"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='name']" position="after">
-                <field name="stn_razon_social" string="Razón Social" optional="show"/>
-            </xpath>
-        </field>
-    </record>
+    <data>
+        <record id="view_res_partner_filter_razon_social" model="ir.ui.view">
+            <field name="name">res.partner.select.razon.social</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="stn_razon_social" filter_domain="[('stn_razon_social', 'ilike', self)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_form_stn_razon" model="ir.ui.view">
+            <field name="name">res.partner.form.stn.razon</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="stn_razon_social" string="Razón Social"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
 </odoo>

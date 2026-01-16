@@ -1,5 +1,5 @@
 {
-    "name": "Busqueda",
+    "name": "Search_vat_helpdesk",
     "summary": "Modulo para generar busqueda con campo nuevo",
     "version": "19.0.1.0.0",
     "TM/SD": "Maya Jily Salgado Miranda, Stones Business Group",
@@ -12,3 +12,4 @@
     "application": True,
     "installable": True,
 }
+
