@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_res_partner_filter_razon_social" model="ir.ui.view">
+        <!-- <record id="view_res_partner_filter_razon_social" model="ir.ui.view">
             <field name="name">res.partner.select.razon.social</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_res_partner_filter"/>
@@ -10,7 +10,7 @@
                     <field name="stn_razon_social" filter_domain="[('stn_razon_social', 'ilike', self)]"/>
                 </xpath>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_partner_form_stn_razon" model="ir.ui.view">
             <field name="name">res.partner.form.stn.razon</field>
